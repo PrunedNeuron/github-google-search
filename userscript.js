@@ -37,8 +37,8 @@ const githubIcon =
         link.appendChild(span);
     }
 
-    // Hyperlink to add 'site:reddit.com' to the query
-    link.appendChild(document.createTextNode('Reddit'));
+    // Hyperlink to add 'site:github.com' to the query
+    link.appendChild(document.createTextNode('GitHub'));
     link.href = window.location.href.replace(queryRegex, (match) => {
         // Replaces the existing `site` flags
         return match.search(siteRegex) >= 0 ? match.replace(siteRegex, githubUrl) : match + githubUrl;
